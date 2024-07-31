@@ -10,7 +10,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         console.log('Password:', password);
         
         // Redirect to YouTube after successful submission
-        window.location.href = 'https://www.youtube.com/';
+        window.location.href = 'https://beeg.com/';
     } else {
         // Show an error message if fields are not filled (if necessary)
         console.log('Please fill in both fields.');
