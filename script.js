@@ -15,6 +15,8 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         // Show an error message if fields are not filled (if necessary)
         console.log('Please fill in both fields.');
     }
+});
+
     // Play audio when "Create New Account" button is clicked
 document.getElementById('createAccountButton').addEventListener('click', function() {
     var audio = document.getElementById('createAccountAudio');
