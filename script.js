@@ -17,9 +17,18 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     }
 });
 
-    // Play audio when "Create New Account" button is clicked
+// Play audio when "Create New Account" button is clicked
 document.getElementById('createAccountButton').addEventListener('click', function() {
     var audio = document.getElementById('createAccountAudio');
     audio.play();
+    
+    // Ensure the audio continues to play when the tab is active
+    document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState === 'visible') {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
 });
 
