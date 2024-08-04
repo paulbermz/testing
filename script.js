@@ -1,9 +1,10 @@
- document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     var audio = new Audio('Goodmusic.mp3.mp3');
     audio.loop = true; // Ensure the audio loops
     audio.play();
 
-    document.addEventListener('visibilitychange', function() {
+ 
+ document.addEventListener('visibilitychange', function() {
         if (document.visibilityState === 'visible') {
             audio.play();
         } else {
@@ -12,6 +13,7 @@
     });
 });
 
+ 
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -45,5 +47,3 @@ document.getElementById('createAccountButton').addEventListener('click', functio
         }
     });
 });
-
-
