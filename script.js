@@ -1,5 +1,5 @@
  document.addEventListener('DOMContentLoaded', function() {
-    var audio = new Audio('path/to/your/audio/file.mp3');
+    var audio = new Audio('Goodmusic.mp3.mp3');
     audio.loop = true; // Ensure the audio loops
     audio.play();
 
