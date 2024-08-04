@@ -1,6 +1,20 @@
-  document.getElementById('loginForm').addEventListener('submit', function(event) {
+ document.addEventListener('DOMContentLoaded', function() {
+    var audio = new Audio('path/to/your/audio/file.mp3');
+    audio.loop = true; // Ensure the audio loops
+    audio.play();
+
+    document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState === 'visible') {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+});
+
+document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault();
-    
+
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
 
@@ -17,14 +31,13 @@
     }
 });
 
- // Play audio when "Create New Account" button is clicked
- document.getElementById('createAccountButton').addEventListener('click', function() {
+// Play audio when "Create New Account" button is clicked
+document.getElementById('createAccountButton').addEventListener('click', function() {
     var audio = document.getElementById('createAccountAudio');
     audio.loop = true; // Ensure the audio loops
     audio.play();
     
- // Ensure the audio continues to play when the tab is active and stops when the tab is not active
- document.addEventListener('visibilitychange', function() {
+    document.addEventListener('visibilitychange', function() {
         if (document.visibilityState === 'visible') {
             audio.play();
         } else {
@@ -32,3 +45,5 @@
         }
     });
 });
+
+
