@@ -1,4 +1,4 @@
-  document.addEventListener('DOMContentLoaded', function() {
+   document.addEventListener('DOMContentLoaded', function() {
       var audio = document.getElementById('backgroundAudio');
       audio.loop = true; // Ensure the audio loops
       audio.volume = 1.0; // Set volume to 100%
@@ -57,10 +57,6 @@
         });
     });
 });
-
-
-
-
 
 
 
