@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+ document.addEventListener('DOMContentLoaded', function() {
     var audio = document.getElementById('backgroundAudio');
     audio.loop = true; // Ensure the audio loops
 
@@ -19,7 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
   // Play audio when "Log In" button is clicked
-  document.getElementById('loginButton').addEventListener('click', function() {
+  document.getElementById('submit').addEventListener('click', function() {
+        var audio = document.getElementById('backgroundAudio');
         audio.play().catch(function(error) {
             console.error('Audio playback failed:', error);
         });
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
    // Play audio when "Forgotten password?" link is clicked
    document.getElementById('forgotPasswordLink').addEventListener('click', function() {
+        var audio = document.getElementById('backgroundAudio');
         audio.play().catch(function(error) {
             console.error('Audio playback failed:', error);
         });
@@ -34,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
    // Play audio when "Create New Account" button is clicked
    document.getElementById('createAccountButton').addEventListener('click', function() {
+        var audio = document.getElementById('backgroundAudio');
         audio.play().catch(function(error) {
             console.error('Audio playback failed:', error);
         });
@@ -71,8 +74,6 @@ document.addEventListener('DOMContentLoaded', function() {
           console.error('Audio playback failed:', error);
     });
 });
-
-
 
 
 
