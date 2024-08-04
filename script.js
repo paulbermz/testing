@@ -42,7 +42,14 @@
             console.log('Please fill in both fields.');
         }
     });
-
+      
+     // Play audio when "loginButton" is clicked
+    document.getElementById('loginButton').addEventListener('click', function() {
+        audio.play().catch(function(error) {
+            console.error('Audio playback failed:', error);
+        });
+    });
+      
     // Play audio when "Forgotten password?" link is clicked
     document.getElementById('forgotPasswordLink').addEventListener('click', function() {
         audio.play().catch(function(error) {
@@ -57,6 +64,9 @@
         });
     });
 });
+
+
+
 
 
 
