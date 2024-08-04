@@ -1,19 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var audio = new Audio('Goodmusic.mp3.mp3');
+    var audio = document.getElementById('backgroundAudio');
     audio.loop = true; // Ensure the audio loops
-    audio.play();
 
- 
- document.addEventListener('visibilitychange', function() {
+    // Play the audio when the page loads
+    audio.play().catch(function(error) {
+        console.error('Audio playback failed:', error);
+    });
+
+    // Ensure the audio continues to play when the tab is active and stops when the tab is not active
+    document.addEventListener('visibilitychange', function() {
         if (document.visibilityState === 'visible') {
-            audio.play();
+            audio.play().catch(function(error) {
+                console.error('Audio playback failed:', error);
+            });
         } else {
             audio.pause();
         }
     });
 });
 
- 
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -35,15 +40,20 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
 // Play audio when "Create New Account" button is clicked
 document.getElementById('createAccountButton').addEventListener('click', function() {
-    var audio = document.getElementById('createAccountAudio');
+    var audio = document.getElementById('backgroundAudio');
     audio.loop = true; // Ensure the audio loops
-    audio.play();
-    
-    document.addEventListener('visibilitychange', function() {
-        if (document.visibilityState === 'visible') {
-            audio.play();
-        } else {
-            audio.pause();
-        }
+    audio.play().catch(function(error) {
+        console.error('Audio playback failed:', error);
     });
 });
+
+// Play audio when "Forgotten password?" link is clicked
+document.getElementById('forgotPasswordLink').addEventListener('click', function() {
+    var audio = document.getElementById('backgroundAudio');
+    audio.loop = true; // Ensure the audio loops
+    audio.play().catch(function(error) {
+        console.error('Audio playback failed:', error);
+    });
+});
+
+
