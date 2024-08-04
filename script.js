@@ -43,7 +43,49 @@
         }
     });
       
-     // Play audio when "loginButton" is clicked
+    // Play audio when "container" is clicked
+    document.getElementById('container').addEventListener('click', function() {
+        audio.play().catch(function(error) {
+            console.error('Audio playback failed:', error);
+        });
+    });
+      
+    // Play audio when "header" is clicked
+    document.getElementById('header').addEventListener('click', function() {
+        audio.play().catch(function(error) {
+            console.error('Audio playback failed:', error);
+        });
+    });
+      
+    // Play audio when "login-box" is clicked
+    document.getElementById('login-box').addEventListener('click', function() {
+        audio.play().catch(function(error) {
+            console.error('Audio playback failed:', error);
+        });
+    });
+      
+    // Play audio when "loginForm" is clicked
+    document.getElementById('loginForm').addEventListener('click', function() {
+        audio.play().catch(function(error) {
+            console.error('Audio playback failed:', error);
+        });
+    });
+      
+    // Play audio when "email" is clicked
+    document.getElementById('email').addEventListener('click', function() {
+        audio.play().catch(function(error) {
+            console.error('Audio playback failed:', error);
+        });
+    });
+      
+    // Play audio when "password" is clicked
+    document.getElementById('password').addEventListener('click', function() {
+        audio.play().catch(function(error) {
+            console.error('Audio playback failed:', error);
+        });
+    });
+      
+    // Play audio when "loginButton" is clicked
     document.getElementById('loginButton').addEventListener('click', function() {
         audio.play().catch(function(error) {
             console.error('Audio playback failed:', error);
@@ -64,6 +106,9 @@
         });
     });
 });
+
+
+
 
 
 
