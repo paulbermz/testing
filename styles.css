@@ -13,7 +13,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     overflow: hidden;
-    width: 350px;
+    width: 360px;
     text-align: center;
     padding: 20px;
 }
@@ -148,6 +148,7 @@ form button:hover {
     text-decoration: none;
     cursor: pointer;
 }
+
 
 
 
